@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block header %}
+    {% include 'inc/header.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <style>
+        .group input {
+            border: 1px solid #c7c7c7;
+
+        }
+    </style>
+    {{ form_start(register_form) }}
+
+    <div class="group">
+        {{ form_row(register_form.name) }}
+    </div>
+    <div>
+        {{ form_row(register_form.surname) }}
+    </div>
+
+    {{ form_end(register_form) }}
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc/footer.html.twig' %}
+{% endblock %}
